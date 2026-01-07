@@ -352,6 +352,23 @@ main {
   width: max-content;
   padding: 3px 12px;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.role-text { min-height: 1em; }
+
+.role-cursor {
+  width: 1px;
+  height: 1em;
+  background: var(--white-1);
+  display: inline-block;
+  animation: cursor-blink 1s steps(1) infinite;
+}
+
+@keyframes cursor-blink {
+  50% { opacity: 0; }
 }
 
 .info_more-btn {
@@ -1726,7 +1743,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* service */
 
   .service-list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px 25px;
   }
 
